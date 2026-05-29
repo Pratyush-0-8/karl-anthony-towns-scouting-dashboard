@@ -617,7 +617,7 @@ if page == "scouting":
         ]
 
     else:
-        target = "Assists"
+        target = "Assisted"
         supporting_cols = [
             "MIN", "TOV", "FGA", "PTS",
             "AST_PER_MIN", "USAGE_PROXY",
