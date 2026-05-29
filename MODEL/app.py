@@ -499,6 +499,31 @@ if page == "home":
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+    
+    kat_path = BASE_DIR / "assets" / "KATSAD.gif"
+    arrow_path = BASE_DIR / "assets" / "DARROW.gif"
+
+    kat_base64 = base64.b64encode(kat_path.read_bytes()).decode()
+    arrow_base64 = base64.b64encode(arrow_path.read_bytes()).decode()
+
+    st.markdown(
+        f"""
+        <div style="
+            margin-top: -35px;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            justify-items: center;
+            column-gap: 1.5rem;
+        ">
+            <img src="data:image/gif;base64,{arrow_base64}" width="150" style="transform: rotate(90deg);">
+            <img src="data:image/gif;base64,{kat_base64}" width="400">
+            <img src="data:image/gif;base64,{arrow_base64}" width="150" style="transform: rotate(90deg);">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     section(
         "Overview",
