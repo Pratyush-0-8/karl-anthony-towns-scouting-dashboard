@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Mac junk
+.DS_Store
+
+# Model experiments / notebooks
+DATAGEN/
+MODEL/*.ipynb
+
+# Old saved data
+SAVEDDATA/
+
+# Optional: ignore extra old CSVs if you don't want them
+NBADATA/SAVEDDATA/
