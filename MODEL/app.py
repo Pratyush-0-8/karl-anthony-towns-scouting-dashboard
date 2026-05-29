@@ -599,7 +599,7 @@ if page == "scouting":
             value=min(25, len(filtered))
         )
 
-    if goal == "Stop him from scoring":
+    if goal == "Points":
         target = "PTS"
         supporting_cols = [
             "MIN", "FGA", "FG3A", "FTA",
@@ -608,7 +608,7 @@ if page == "scouting":
             "OPP_PACE"
         ]
 
-    elif goal == "Keep him off the glass":
+    elif goal == "Rebounds":
         target = "REB"
         supporting_cols = [
             "MIN", "OREB", "DREB",
@@ -617,7 +617,7 @@ if page == "scouting":
         ]
 
     else:
-        target = "AST"
+        target = "Assists"
         supporting_cols = [
             "MIN", "TOV", "FGA", "PTS",
             "AST_PER_MIN", "USAGE_PROXY",
