@@ -20,3 +20,6 @@ SAVEDDATA/
 
 # Optional: ignore extra old CSVs if you don't want them
 NBADATA/SAVEDDATA/
+# macOS junk
+.DS_Store
+**/.DS_Store
