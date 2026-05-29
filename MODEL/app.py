@@ -627,7 +627,7 @@ if page == "scouting":
     shot_zone_cols = get_shot_zone_cols(filtered)
     supporting_cols = [col for col in supporting_cols + shot_zone_cols if col in filtered.columns]
 
-    ascending_order = True if game_group == "Lowest games" else False
+    ascending_order = True if game_group == "Worst Performances" else False
     selected_games = filtered.sort_values(target, ascending=ascending_order).head(top_n)
 
     selected_avg = selected_games[supporting_cols].mean(numeric_only=True)
@@ -647,7 +647,7 @@ if page == "scouting":
     else:
         comparison = comparison.sort_values("Difference", ascending=True)
 
-    group_label = "highest" if game_group == "Highest games" else "lowest"
+    group_label = "highest" if game_group == "Top Performances" else "lowest"
 
     if len(comparison) > 0:
         main_driver = comparison.index[0]
