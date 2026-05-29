@@ -502,8 +502,8 @@ if page == "home":
     """, unsafe_allow_html=True)
     
     
-    kat_path = BASE_DIR / "assets" / "KATSAD.gif"
-    arrow_path = BASE_DIR / "assets" / "DARROW.gif"
+    kat_path = BASE_DIR / "ASSETS" / "KATSAD.gif"
+    arrow_path = BASE_DIR / "ASSETS" / "DARROW.gif"
 
     kat_base64 = base64.b64encode(kat_path.read_bytes()).decode()
     arrow_base64 = base64.b64encode(arrow_path.read_bytes()).decode()
