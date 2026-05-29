@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
 
 st.set_page_config(
     page_title="How to Guard KAT",
@@ -74,7 +75,12 @@ st.markdown(
 # -----------------------
 # Load data
 # -----------------------
-df = pd.read_csv("../NBADATA/NBADATA/kkat_df.csv")
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "NBADATA" / "NBADATA" / "kkat_df.csv"
+
+df = pd.read_csv(DATA_PATH)
 df["GAME_DATE"] = pd.to_datetime(df["GAME_DATE"])
 df = df.sort_values("GAME_DATE").reset_index(drop=True)
 
