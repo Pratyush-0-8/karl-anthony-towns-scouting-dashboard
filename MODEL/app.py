@@ -642,7 +642,7 @@ if page == "scouting":
 
     comparison = comparison.drop(index=target, errors="ignore")
 
-    if game_group == "Highest games":
+    if game_group == "Top Performances":
         comparison = comparison.sort_values("Difference", ascending=False)
     else:
         comparison = comparison.sort_values("Difference", ascending=True)
